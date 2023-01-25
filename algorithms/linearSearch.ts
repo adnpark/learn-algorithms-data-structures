@@ -1,3 +1,9 @@
+/**
+ * Linear Search
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ */
+
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function linearSearch(list: number[], target: number): number | null {
