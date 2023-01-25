@@ -6,21 +6,20 @@
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-function linearSearch(list: number[], target: number): number | null {
+function linearSearch(list: number[], target: number): number {
   /**
-   * Returns the index position of the target if found, else returns Null
+   * Returns the index position of the target if found, else returns -1
    */
-  let result = null;
-  list.forEach((value, index) => {
-    if (value === target) {
-      return (result = index);
+  for (let i = 0; i < list.length; i++) {
+    if (list[i] === target) {
+      return i;
     }
-  });
-  return result;
+  }
+  return -1;
 }
 
-function verify(list: number[], index: number | null, target: number) {
-  if (!index) {
+function verify(list: number[], index: number, target: number) {
+  if (index === -1) {
     return console.log(`Target not found in list`);
   }
   if (list[index] === target) {
