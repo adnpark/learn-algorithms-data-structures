@@ -1,3 +1,4 @@
+export {};
 /**
  * Linear Search
  * Time Complexity: O(n)
